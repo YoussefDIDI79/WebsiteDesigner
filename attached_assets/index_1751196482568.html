@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoxMedia - Votre Partenaire Numérique d'Exception</title>
+    <meta name="description" content="BoxMedia - Agence numérique d'exception spécialisée dans le développement web, les stratégies de médias sociaux et le design UX/UI. Découvrez nos solutions innovantes.">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="BoxMedia - Votre Partenaire Numérique d'Exception">
+    <meta property="og:description" content="Agence numérique professionnelle offrant des services de développement web, stratégies marketing numériques et design d'expérience utilisateur.">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-container">
+            <div class="loading-logo">
+                <span>Box</span><span>Media</span>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p>Chargement de votre expérience numérique d'exception...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-cube"></i>
+                <span>BoxMedia</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#hero" class="nav-link active">
+                        <i class="fas fa-home"></i>
+                        <span>Accueil</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link">
+                        <i class="fas fa-cogs"></i>
+                        <span>Services</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#portfolio" class="nav-link">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Portfolio</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">
+                        <i class="fas fa-users"></i>
+                        <span>À Propos</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="#contact" class="cta-button">
+                    <span>Démarrer votre projet</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero" data-aos="fade-up">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge" data-aos="fade-down" data-aos-delay="200">
+                    <i class="fas fa-rocket"></i>
+                    <span>Agence numérique leader dans la région</span>
+                </div>
+                
+                <h1 class="hero-title" data-aos="fade-up" data-aos-delay="400">
+                    Nous transformons vos <span class="gradient-text">idées numériques</span>
+                    <br>en réalité extraordinaire
+                </h1>
+                
+                <p class="hero-description" data-aos="fade-up" data-aos-delay="600">
+                    Chez BoxMedia, nous combinons créativité et technologie pour vous offrir des solutions numériques d'exception qui aident votre marque à croître et prospérer à l'ère numérique
+                </p>
+                
+                <div class="hero-stats" data-aos="fade-up" data-aos-delay="800">
+                    <div class="stat-item">
+                        <div class="stat-number">200+</div>
+                        <div class="stat-label">Projets réalisés</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">150+</div>
+                        <div class="stat-label">Clients satisfaits</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Années d'expérience</div>
+                    </div>
+                </div>
+                
+                <div class="hero-actions" data-aos="fade-up" data-aos-delay="1000">
+                    <a href="#portfolio" class="btn-primary">
+                        <span>Découvrir nos réalisations</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#video-modal" class="btn-play" id="play-video">
+                        <div class="play-icon">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <span>Voir la vidéo de présentation</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual" data-aos="fade-left" data-aos-delay="600">
+                <div class="floating-elements">
+                    <div class="floating-card card-1">
+                        <i class="fas fa-code"></i>
+                        <span>Développement Web</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Apps Mobiles</span>
+                    </div>
+                    <div class="floating-card card-3">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Marketing Digital</span>
+                    </div>
+                    <div class="floating-card card-4">
+                        <i class="fas fa-paint-brush"></i>
+                        <span>Design UI/UX</span>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-container">
+                        <div class="tech-stack">
+                            <div class="tech-item">React</div>
+                            <div class="tech-item">Vue</div>
+                            <div class="tech-item">Angular</div>
+                            <div class="tech-item">Node.js</div>
+                            <div class="tech-item">Laravel</div>
+                            <div class="tech-item">WordPress</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Faites défiler pour découvrir davantage</span>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Nos Services d'Exception</span>
+                <h2 class="section-title">Nous offrons des solutions numériques complètes pour votre succès</h2>
+                <p class="section-subtitle">
+                    Nous nous spécialisons dans la fourniture de services numériques intégrés qui aident les entreprises à croître et prospérer à l'ère numérique, du développement et design au marketing et conseil
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Développement Web</h3>
+                    <p>Création de sites web modernes, réactifs et performants utilisant les dernières technologies pour garantir une expérience utilisateur exceptionnelle.</p>
+                    <ul class="service-features">
+                        <li>Sites web responsives</li>
+                        <li>Applications web progressives</li>
+                        <li>E-commerce personnalisé</li>
+                        <li>Optimisation SEO</li>
+                    </ul>
+                    <div class="service-cta">
+                        <a href="#contact" class="service-btn">En savoir plus</a>
+                    </div>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3>Stratégie Marketing Digital</h3>
+                    <p>Développement de stratégies marketing digital complètes pour maximiser votre présence en ligne et atteindre vos objectifs commerciaux.</p>
+                    <ul class="service-features">
+                        <li>Gestion des réseaux sociaux</li>
+                        <li>Publicité numérique</li>
+                        <li>Content marketing</li>
+                        <li>Analytics et reporting</li>
+                    </ul>
+                    <div class="service-cta">
+                        <a href="#contact" class="service-btn">En savoir plus</a>
+                    </div>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Design UI/UX</h3>
+                    <p>Conception d'interfaces utilisateur intuitives et d'expériences utilisateur exceptionnelles qui convertissent les visiteurs en clients fidèles.</p>
+                    <ul class="service-features">
+                        <li>Design d'interface moderne</li>
+                        <li>Prototypage interactif</li>
+                        <li>Tests utilisateur</li>
+                        <li>Identité visuelle</li>
+                    </ul>
+                    <div class="service-cta">
+                        <a href="#contact" class="service-btn">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Nos Réalisations</span>
+                <h2 class="section-title">Découvrez nos projets les plus réussis</h2>
+                <p class="section-subtitle">
+                    Chaque projet est unique et reflète notre engagement envers l'excellence et l'innovation dans le domaine numérique
+                </p>
+            </div>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-laptop-code"></i>
+                            <span>E-commerce</span>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h4>Boutique en Ligne Premium</h4>
+                                <p>Plateforme e-commerce moderne avec système de paiement intégré</p>
+                                <div class="portfolio-tags">
+                                    <span>React</span>
+                                    <span>Node.js</span>
+                                    <span>MongoDB</span>
+                                </div>
+                            </div>
+                            <div class="portfolio-actions">
+                                <a href="#" class="btn-demo">Voir le site</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>App Mobile</span>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h4>Application Fitness</h4>
+                                <p>App mobile pour le suivi de fitness avec interface intuitive</p>
+                                <div class="portfolio-tags">
+                                    <span>React Native</span>
+                                    <span>Firebase</span>
+                                    <span>Redux</span>
+                                </div>
+                            </div>
+                            <div class="portfolio-actions">
+                                <a href="#" class="btn-demo">Voir l'app</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Dashboard</span>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h4>Tableau de Bord Analytics</h4>
+                                <p>Interface de gestion avec analytics avancés et rapports en temps réel</p>
+                                <div class="portfolio-tags">
+                                    <span>Vue.js</span>
+                                    <span>D3.js</span>
+                                    <span>Express</span>
+                                </div>
+                            </div>
+                            <div class="portfolio-actions">
+                                <a href="#" class="btn-demo">Voir la démo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-utensils"></i>
+                            <span>Restaurant</span>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h4>Site Restaurant Gastronomique</h4>
+                                <p>Site web élégant avec système de réservation en ligne</p>
+                                <div class="portfolio-tags">
+                                    <span>WordPress</span>
+                                    <span>Custom Theme</span>
+                                    <span>PHP</span>
+                                </div>
+                            </div>
+                            <div class="portfolio-actions">
+                                <a href="#" class="btn-demo">Voir le site</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>EdTech</span>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h4>Plateforme d'Apprentissage</h4>
+                                <p>Système de gestion d'apprentissage avec cours interactifs</p>
+                                <div class="portfolio-tags">
+                                    <span>Angular</span>
+                                    <span>TypeScript</span>
+                                    <span>PostgreSQL</span>
+                                </div>
+                            </div>
+                            <div class="portfolio-actions">
+                                <a href="#" class="btn-demo">Voir la plateforme</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="600">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-building"></i>
+                            <span>Corporate</span>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h4>Site Corporate</h4>
+                                <p>Site web professionnel pour une entreprise internationale</p>
+                                <div class="portfolio-tags">
+                                    <span>Next.js</span>
+                                    <span>Tailwind</span>
+                                    <span>Headless CMS</span>
+                                </div>
+                            </div>
+                            <div class="portfolio-actions">
+                                <a href="#" class="btn-demo">Voir le site</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-container">
+                <div class="about-content" data-aos="fade-right">
+                    <div class="section-header">
+                        <span class="section-badge">À Propos de BoxMedia</span>
+                        <h2 class="section-title">Votre partenaire de confiance pour la transformation numérique</h2>
+                    </div>
+                    
+                    <p class="about-description">
+                        Depuis plus de 5 ans, BoxMedia accompagne les entreprises dans leur transformation numérique. 
+                        Notre équipe passionnée de développeurs, designers et stratèges marketing travaille ensemble 
+                        pour créer des solutions innovantes qui font la différence.
+                    </p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <h4>Innovation Constante</h4>
+                                <p>Nous restons à la pointe des dernières technologies pour vous offrir des solutions avant-gardistes.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <i class="fas fa-handshake"></i>
+                            <div>
+                                <h4>Partenariat Durable</h4>
+                                <p>Nous construisons des relations à long terme basées sur la confiance et les résultats.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <i class="fas fa-trophy"></i>
+                            <div>
+                                <h4>Excellence Garantie</h4>
+                                <p>Chaque projet est livré avec le plus haut niveau de qualité et de professionnalisme.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual" data-aos="fade-left">
+                    <div class="team-showcase">
+                        <div class="team-stats">
+                            <div class="team-stat">
+                                <span class="stat-number">15+</span>
+                                <span class="stat-label">Experts</span>
+                            </div>
+                            <div class="team-stat">
+                                <span class="stat-number">24/7</span>
+                                <span class="stat-label">Support</span>
+                            </div>
+                            <div class="team-stat">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Satisfaction</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Contactez-nous</span>
+                <h2 class="section-title">Prêt à démarrer votre projet ?</h2>
+                <p class="section-subtitle">
+                    Discutons de vos besoins et transformons vos idées en réalité numérique exceptionnelle
+                </p>
+            </div>
+
+            <div class="contact-container">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>contact@boxmedia.fr</p>
+                            <a href="mailto:contact@boxmedia.fr">Nous écrire</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Téléphone</h4>
+                            <p>+33 1 23 45 67 89</p>
+                            <a href="tel:+33123456789">Nous appeler</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Adresse</h4>
+                            <p>123 Avenue des Champs<br>75001 Paris, France</p>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h4>Suivez-nous</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" data-aos="fade-left" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Sujet</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Sélectionnez un sujet</option>
+                            <option value="web-development">Développement Web</option>
+                            <option value="mobile-app">Application Mobile</option>
+                            <option value="digital-marketing">Marketing Digital</option>
+                            <option value="ui-ux-design">Design UI/UX</option>
+                            <option value="other">Autre</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet ou vos besoins..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span>Envoyer le message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-cube"></i>
+                        <span>BoxMedia</span>
+                    </div>
+                    <p>Votre partenaire numérique pour transformer vos idées en succès digital.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#services">Développement Web</a></li>
+                            <li><a href="#services">Marketing Digital</a></li>
+                            <li><a href="#services">Design UI/UX</a></li>
+                            <li><a href="#services">Consultation</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Entreprise</h4>
+                        <ul>
+                            <li><a href="#about">À Propos</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 BoxMedia. Tous droits réservés.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="video-modal">
+        <div class="video-modal-content">
+            <span class="video-close">&times;</span>
+            <div class="video-wrapper">
+                <iframe src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
