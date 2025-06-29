@@ -100,6 +100,10 @@ BoxMedia is a modern, performance-optimized portfolio website for a French digit
   - Enhanced accessibility with skip links and screen reader support
   - Improved typography with better contrast ratios throughout the site
   - Maintained static site architecture with HTML, CSS, JS, and Netlify deployment
+- June 29, 2025: Updated location from France to Morocco
+  - Changed address from "123 Avenue des Champs-Élysées, 75008 Paris, France" to "Avenue Mohammed V, 20000 Casablanca, Maroc"
+  - Updated phone numbers from French (+33) to Moroccan (+212) format
+  - Updated structured data and contact forms with new location information
 
 ## User Preferences
 
