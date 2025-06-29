@@ -380,20 +380,45 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Simulate form submission with better UX
+            // Submit form data to Google Sheets
             const submitBtn = contactForm.querySelector('.submit-btn');
             const originalText = submitBtn.innerHTML;
             
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
             submitBtn.disabled = true;
             
-            // Simulate API call delay
-            setTimeout(() => {
+            // Add timestamp to form data
+            formData.append('timestamp', new Date().toLocaleString('fr-FR', {
+                timeZone: 'Africa/Casablanca',
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit'
+            }));
+            
+            // Send data to Google Sheets
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwqcTxiv8FApw0eNyKF94sJOKJZ0Le1HSYaheleB9wBCYMwhJpNSHrqq3G0lxUvVPUo/exec';
+            
+            fetch(scriptURL, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors'
+            })
+            .then(response => {
+                // With no-cors mode, we can't read the response status
+                // So we assume success if the request completes
                 showNotification('Merci pour votre message ! Nous vous répondrons rapidement.', 'success');
                 contactForm.reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showNotification('Une erreur s\'est produite. Veuillez réessayer plus tard.', 'error');
+            })
+            .finally(() => {
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
-            }, 1500);
+            });
         });
     }
 
