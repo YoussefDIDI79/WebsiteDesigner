@@ -818,6 +818,17 @@ a:focus {
     line-height: 1.8;
 }
 
+/* Class to shift text content to the right */
+.texte-decale {
+    margin-left: 40px;
+}
+
+.about-features {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
 /* Services Section */
 .services {
     padding: var(--space-20) 0;
@@ -1455,6 +1466,7 @@ a:focus {
     grid-template-columns: 1fr 1fr;
     gap: var(--space-16);
     margin-bottom: var(--space-16);
+    margin-left: 40px;
 }
 
 .footer-logo {
@@ -1774,6 +1786,14 @@ a:focus {
     .container {
         padding: 0 var(--space-3);
     }
+    
+    .texte-decale {
+        margin-left: 20px;
+    }
+    
+    .footer-content {
+        margin-left: 20px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1830,6 +1850,14 @@ a:focus {
         right: var(--space-2);
         left: var(--space-2);
         max-width: none;
+    }
+    
+    .texte-decale {
+        margin-left: 10px;
+    }
+    
+    .footer-content {
+        margin-left: 10px;
     }
 }
 
@@ -2003,4 +2031,18 @@ a:focus {
 .service-btn:disabled:hover,
 .submit-btn:disabled:hover {
     transform: none;
+}
+
+.contact-info {
+    margin-left: 40px;
+}
+@media (max-width: 768px) {
+    .contact-info {
+        margin-left: 20px;
+    }
+}
+@media (max-width: 480px) {
+    .contact-info {
+        margin-left: 10px;
+    }
 }
