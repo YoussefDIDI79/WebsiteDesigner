@@ -362,8 +362,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Enhanced Contact Form Handling with better validation
+    // Enhanced Contact Form Handling with Google Sheets integration
     const contactForm = document.getElementById('contact-form');
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwqcTxiv8FApw0eNyKF94sJOKJZ0Le1HSYaheleB9wBCYMwhJpNSHrqq3G0lxUvVPUo/exec';
+    
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
@@ -387,7 +389,7 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
             submitBtn.disabled = true;
             
-            // Add timestamp to form data
+            // Add timestamp with Morocco timezone
             formData.append('timestamp', new Date().toLocaleString('fr-FR', {
                 timeZone: 'Africa/Casablanca',
                 year: 'numeric',
@@ -397,23 +399,31 @@ document.addEventListener('DOMContentLoaded', function() {
                 minute: '2-digit'
             }));
             
-            // Send data to Google Sheets
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbwqcTxiv8FApw0eNyKF94sJOKJZ0Le1HSYaheleB9wBCYMwhJpNSHrqq3G0lxUvVPUo/exec';
+            // Add source information
+            formData.append('source', 'BoxMedia Website');
+            formData.append('url', window.location.href);
             
-            fetch(scriptURL, {
-                method: 'POST',
-                body: formData,
-                mode: 'no-cors'
+            // Send data to Google Sheets with improved error handling
+            fetch(scriptURL, { 
+                method: 'POST', 
+                body: formData 
             })
             .then(response => {
-                // With no-cors mode, we can't read the response status
-                // So we assume success if the request completes
-                showNotification('Merci pour votre message ! Nous vous répondrons rapidement.', 'success');
-                contactForm.reset();
+                if (response.ok) {
+                    showNotification('Merci pour votre message ! Nous vous répondrons rapidement.', 'success');
+                    contactForm.reset();
+                } else {
+                    throw new Error('Network response was not ok');
+                }
             })
             .catch(error => {
-                console.error('Error:', error);
-                showNotification('Une erreur s\'est produite. Veuillez réessayer plus tard.', 'error');
+                console.error('Erreur lors de l\'envoi:', error);
+                // Try to determine if it's a network issue or server issue
+                if (error.name === 'TypeError' && error.message.includes('fetch')) {
+                    showNotification('Problème de connexion. Vérifiez votre connexion internet et réessayez.', 'error');
+                } else {
+                    showNotification('Une erreur s\'est produite. Veuillez réessayer plus tard.', 'error');
+                }
             })
             .finally(() => {
                 submitBtn.innerHTML = originalText;
